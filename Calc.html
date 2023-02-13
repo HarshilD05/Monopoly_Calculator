@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monopoly</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id = "panel">
+        <header>
+            <img id="logo" src="./images/monopoly-logo.png" alt="Monopoly Logo">
+        </header>
+        <nav>
+        <div id="colour" onclick="dropList()"></div>
+    </nav>
+    <div id="frame">
+            <div id="players">
+                <div class="card" id="red" onclick="setRed()"><span class="key">R</span></div>  
+                <div class="card" id="blue" onclick="setBlue()"><span class="key">B</span></div>
+                <div class="card" id="green" onclick="setGreen()"><span class="key">G</span></div>
+                <div class="card" id="yellow" onclick="setYellow()"><span class="key">Y</span></div>
+                <div class="card" id="orange" onclick="setOrange()"><span class="key">O</span></div>
+                <div class="card" id="purple" onclick="setPurple()"><span class="key">P</span></div>
+                <div class="card" id="brown" onclick="setBrown()"><span class="key">W</span></div>
+                <div class="card" id="cyan" onclick="setCyan()"><span class="key">L</span></div>
+            </div>
+            <div id="calc">
+                <p id="err"></p>
+                <div id="calcBody">
+                    <div id="screen">
+                        <span id="display"></span>
+                    </div>
+                    <div id="below">
+                        <div id="buttons">
+                            <div class="press"><button id="M" onclick="K_M('m')">M</button></div>
+                            <div class="press"><button id="GO" onclick="GO()">--></button></div>
+                            <div class="press"><button id="K" onclick="K_M('k')">K</button></div>
+                            <div class="press"><button id="b1" onclick="addDigit(1)">1</button></div>
+                            <div class="press"><button id="b2" onclick="addDigit(2)">2</button></div>
+                            <div class="press"><button id="b3" onclick="addDigit(3)">3</button></div>
+                            <div class="press"><button id="b4" onclick="addDigit(4)">4</button></div>
+                            <div class="press"><button id="b5" onclick="addDigit(5)">5</button></div>
+                            <div class="press"><button id="b6" onclick="addDigit(6)">6</button></div>
+                            <div class="press"><button id="b7" onclick="addDigit(7)">7</button></div>
+                            <div class="press"><button id="b8" onclick="addDigit(8)">8</button></div>
+                            <div class="press"><button id="b9" onclick="addDigit(9)">9</button></div>
+                            <div class="press"><button id="C" onclick="C()">C</button></div>
+                            <div class="press"><button id="b0" onclick="addDigit(0)">0</button></div>
+                            <div class="press"><button id="D" onclick="decimal()">.</button></div>
+                            <div class="press"><button id="b+" onclick="collect()">+</button></div>
+                            <div class="press"><button id="pay" onclick="pay()">PAY</button></div>
+                            <div class="press"><button id="b-" onclick="payBank()">-</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <!--Javascript-->
+    <script src="./mono.js"></script>
+</body>
+</html>
