@@ -1,3 +1,166 @@
+<<<<<<< HEAD
+/* Common */
+body { background: rgba(0,0,0,0.8); }
+
+#logo { width: 80vw; max-width: 350px;
+display:block; margin:auto;}
+
+nav { 
+    background:#272727;
+    height: 2cm; 
+
+    display: flex;
+    justify-content: space-between; /* Pushes items to both ends */
+    align-items: center; /* Vertically center items */
+}
+
+#reset_icon {
+    height: 1.5cm;
+    width: 1.5cm;
+
+    position: relative;    
+}
+
+
+#panel { max-width: 800px; height: 98vh;
+    margin: auto; 
+    background: #8fff96;
+    border: 3px solid white;
+}
+
+/* For Calc Page */
+#colour { height: 80%; width: 1.6cm; 
+    background-color: aliceblue;
+    margin: 10px;
+    border: 3px solid grey;
+    display: block;
+
+    visibility: hidden;
+}
+
+#frame { 
+    display: grid;
+    grid-template-columns: 6cm auto ;
+}
+
+#players { 
+    display: block;
+    width : 8cm;
+    height: 100%;
+    background: #545454;
+    z-index: 2;
+}
+
+.card { width:3cm; height: 2.5cm;
+    margin: 10px;
+    display : inline-block;
+    /* display: none; */
+}
+
+.selected {
+    border : 5px solid black;
+}
+
+.key {
+    width: 20px;
+    display: block;
+    text-align: center;
+    position: relative;
+    top: 35px;
+    margin: auto;
+    background: rgb(44, 44, 44);
+    border: 2px solid grey;
+    color: whitesmoke;
+}
+
+#red { background-color: red; }
+#blue { background: blue;}
+#green { background: green; }
+#yellow { background: yellow; }
+#purple { background: #c552ff; }
+#brown { background: #5a370a; } 
+#cyan { background: #29fffb; }
+#orange { background: #ff9320; }
+
+#calc { z-index: 1; } 
+
+#calcBody { height: 450px; width: 300px;
+    margin: 10px auto;
+    background-color: #f47b7b; 
+    border-radius: 1.5cm;
+}
+
+#screen { height: 50px; width: 80%;
+    margin: 15px auto;
+    background: #3c3c3c;
+    position: relative;
+    top: 50px;
+    border: 5px solid black;
+    border-radius: 10px;
+}
+
+#display { color: white;
+    position: relative;
+    left: 2.5cm;
+    font-size: 1.5rem;
+}
+
+#below { margin: auto; 
+    position: relative;
+    top: 75px;
+}
+
+#buttons { display: grid;
+    grid-template-columns: 30% 40% 30%;
+    row-gap: 10px; }
+
+.press button { background-color: rgb(95, 95, 95);
+    color: white; 
+    display: block; margin: auto;
+    height: 30px; width: 50px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+}
+
+#M { background-color: rgb(255, 43, 24); }
+#GO { background-color: rgb(67, 205, 58); }
+#K { background-color: rgb(29, 146, 255); }
+
+.No_Dis{
+    display : none;
+}
+
+#err {
+    margin: auto;
+    width: 150px;
+    height: 50px;
+    background: rgb(235, 207, 207);
+    border: 2px solid red;
+    color: red;
+    display: none;
+}
+
+/* for Mobiles and tablets */
+@media  screen and (max-width: 650px) {
+    #panel { height: 95vh; width: 95vw; }
+    #colour { visibility: visible; }
+    #frame { height: 70vh; display: block;} 
+    #calc { height: 100%; }
+    #calcBody { height: 450px;}
+    #players {
+        width : 8cm;
+        display : none;
+        
+    }
+    .card { 
+        display : inline-block;
+        /* position: relative; 
+        top: 1cm; */
+    }
+    .key { display: none; }
+}
+
+=======
 /* Common */
 body { background: rgba(0,0,0,0.8); }
 
@@ -227,3 +390,4 @@ height: 2cm; }
     margin: 10px;
     border: 3px solid black;
 }
+>>>>>>> d83a0808523480b94352734372fa8f07b277ee54
