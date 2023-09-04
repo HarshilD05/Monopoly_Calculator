@@ -12,20 +12,23 @@ let balance = {
 
 let amount = 0,val = 0,X=0,i=0,pCount = 0;
 let colour='red',dot = false,nav = false;
-var cashIn = new Audio('./images/Cash.mp3');
-var cashOut = new Audio('./images/CashOut.mp3');
+var cashIn = new Audio('./assets/Cash.mp3');
+var cashOut = new Audio('./assets/CashOut.mp3');
 
 let colour_Range = ["red","blue","green","yellow","orange","purple","brown","cyan"];
 
 //Functions 
-function PNUM (n) { pCount = n;}
 
-// function reset () {
-//     balance.red = 15000;
-//     balance.blue = 15000;
-//     balance.green = 15000;
-//     balance.yellow = 15000; 
-// }
+function reset () {
+    balance.red = 15000;
+    balance.blue = 15000;
+    balance.green = 15000;
+    balance.yellow = 15000; 
+    balance.orange = 15000;
+    balance.purple = 15000;
+    balance.brown = 15000;
+    balance.cyan = 15000;
+}
 
 function err(code) {
     document.getElementById("display").textContent = "Error !";
@@ -294,7 +297,8 @@ Blue : ${balance.blue}
 Green : ${balance.green}
 Yellow : ${balance.yellow}`);
 
-addEventListener("keyup", (event) => {
+// Reading KeyPresses
+document.addEventListener("keyup", (event) => {
     document.getElementById("err").style = "display: none;";
 
     let K = event.key;
@@ -346,3 +350,19 @@ addEventListener("keyup", (event) => {
 
 });
 
+// Storing away data before reload
+window.addEventListener("beforeunload", () => {
+    localStorage.setItem("balance", JSON.stringify(balance) );
+} );
+
+// Loading previous balance if present
+document.addEventListener("DOMContentLoaded", ()=> {
+    balanceStr = localStorage.getItem("balance");
+    
+    // if found in localStorage then parse the stored json
+    if (balanceStr != null) {
+        balance = JSON.parse(balanceStr);
+    }
+    // else leave as is.
+
+});

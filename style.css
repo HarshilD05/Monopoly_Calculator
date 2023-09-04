@@ -207,7 +207,6 @@ height: 2cm; }
 #pool {
     display: flex;
     flex-wrap: wrap;
-
 }
 
 .area {
